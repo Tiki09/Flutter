@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:frst_owncreate_demo/home_page.dart';
 
 void main(){
   runApp(OwnCreateDemo());
@@ -11,13 +12,7 @@ class OwnCreateDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Material(
-        child: Center(
-          child: Container(
-            child: Text("welcome to first flutter Appn"),
-          )
-        )
-    ),
+      home: HomePage()
     );
   }
 }
