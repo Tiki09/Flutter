@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:frst_owncreate_demo/home_page.dart';
+import 'package:frst_owncreate_demo/pages/home_page.dart';
+import 'package:frst_owncreate_demo/pages/login.dart';
 
 void main(){
   runApp(OwnCreateDemo());
@@ -12,7 +13,18 @@ class OwnCreateDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: HomePage()
+      //home: HomePage(),
+      themeMode: ThemeMode.light,
+      theme: ThemeData(primarySwatch: Colors.cyan),
+      darkTheme: ThemeData(
+        brightness: Brightness.dark),
+      //initialRoute: "/home",
+      routes: {
+        "/":(context) => Login(),
+        "/home":(context) => HomePage(),
+        "/login":(context) => Login()
+
+      },
     );
   }
 }
